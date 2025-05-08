@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Analyst Portfolio - [Name]</title>
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #1a1a1a;
+      --text-light: #333;
+      --text-dark: #f9f9f9;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #typing {
+      font-size: 1.2em;
+      font-weight: 500;
+      height: 1.4em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 { color: #2c3e50; }
+    .project {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 5px solid #007acc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.02);
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+      animation: bounce 2s infinite ease-in-out;
+    }
+    a { color: #007acc; text-decoration: none; }
+    .theme-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background: #007acc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Mode</button>
+  <header>
+    <h1>[Name]</h1>
+    <p>Data Analyst | SQL | Power BI | Python</p>
+    <p id="typing"></p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I’m a data analyst with 2 years of experience in leveraging data to uncover business insights. I specialize in SQL, Excel, Power BI, and Python for data analysis, visualization, and automation.</p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Customer Churn Prediction</h3>
+      <p>Analyzed telecom data to identify key factors behind customer churn and created dashboards to reduce churn rate by 12%.</p>
+      <p><strong>Tools:</strong> SQL, Power BI, Python</p>
+      <a href="https://github.com/example/churn-analysis" target="_blank">View Project on GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>Crime Pattern Mapping</h3>
+      <p>Visualized 5 years of crime data to highlight high-risk areas using geospatial analysis and interactive dashboards.</p>
+      <p><strong>Tools:</strong> Python, Plotly, Pandas</p>
+      <a href="https://github.com/example/crime-map" target="_blank">View Project on GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>NGO Budget Tracker</h3>
+      <p>Developed a budget vs actual spending dashboard to improve transparency and financial control for a non-profit.</p>
+      <p><strong>Tools:</strong> Excel, Power BI</p>
+      <a href="https://github.com/example/ngo-budget-tracker" target="_blank">View Project on GitHub</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Resume</h2>
+    <p><a href="https://gray-jeane-75.tiiny.site" target="_blank">📄 Download My Resume</a></p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/monishamural" target="_blank">linkedin.com/in/example</a></p>
+  </section>
+
+  <div class="footer">
+    <p>© 2025 [Name]. All rights reserved.</p>
+  </div>
+
+  <script>
+    // Typing effect
+    const text = "Turning data into decisions.";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 70);
+      }
+    }
+    typeWriter();
+
+    // Dark mode toggle
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
